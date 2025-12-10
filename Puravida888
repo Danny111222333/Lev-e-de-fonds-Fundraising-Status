@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Puravida888 — Funding Progress</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f9f9f9;
+    }
+    h1 { color: #222; }
+
+    .container {
+        display: flex;
+        align-items: flex-end;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .thermo {
+        width: 60px;
+        height: 300px;
+        border: 3px solid #444;
+        border-radius: 30px;
+        position: relative;
+        background: #eee;
+        overflow: hidden;
+    }
+
+    .thermo-fill {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: #2ecc71;
+        transition: height 0.5s ease;
+    }
+
+    .stats {
+        font-size: 18px;
+    }
+    .stats strong {
+        color: #2c3e50;
+    }
+</style>
+</head>
+<body>
+
+<h1>Puravida888 — Funding Progress</h1>
+
+<script>
+    // 🔥 CHANGE ONLY THIS VALUE 🔥
+    const currentCAD = 5000;  // <-- You update only this
+
+    // Exchange rate CAD → USD
+    const exchangeRate = 0.73;
+
+    // Automatic conversions
+    const currentUSD = currentCAD * exchangeRate;
+    const goalUSD = 25000;
+
+    // Percentage
+    const percentage = Math.min((currentUSD / goalUSD) * 100, 100);
+</script>
+
+<div class="container">
+    <!-- Thermometer -->
+    <div class="thermo">
+        <div class="thermo-fill" id="fill"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <p><strong>Goal:</strong> $25,000 USD</p>
+        <p><strong>Current:</strong> <span id="cad"></span> CAD  
+        = <span id="usd"></span> USD</p>
+        <p><strong>Progress:</strong> <span id="percent"></span>%</p>
+        <p>Last update: <!-- add date --> </p>
+    </div>
+</div>
+
+<script>
+    // Visual thermometer
+    document.getElementById("fill").style.height = percentage + "%";
+
+    // Display numbers
+    document.getElementById("cad").innerText = currentCAD.toLocaleString();
+    document.getElementById("usd").innerText = currentUSD.toFixed(2).toLocaleString();
+    document.getElementById("percent").innerText = percentage.toFixed(1);
+</script>
+
+</body>
+</html>
