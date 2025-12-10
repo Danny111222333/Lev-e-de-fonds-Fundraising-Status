@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Puravida888 – Funding Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 200px;
+            display: block;
+            margin: 20px auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo.png" alt="Puravida888 Logo">
+
+    <h1>PURAVIDA888</h1>
+    <h2>Funding Progress</h2>
+
+    <div class="box">
+        <p><strong>Total received so far:</strong> 5000$ CAD</p>
+        <p><strong>Next update:</strong> Coming soon…</p>
+    </div>
+
+    <div class="box">
+        <h3>Purpose</h3>
+        <p>This page simply shows the most recent funding status and schedule.</p>
+    </div>
+
+</body>
+</html>
